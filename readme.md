@@ -31,18 +31,57 @@ SUWDC Group Social Network
 
 ## First Sprint
 
-* Basic Development Setup/Config
-* Minimal Layouts/Templates/etc...
-    * Global Layout/Partials
-    * Pages
-        * Home Page
-        * Members
-        * Member
-        * Sign Up/Sign In
-        * Edit Profile
-* Member Sign Up and Profile Completion
-    * Name
-    * Contact
-    * Bio
-    * Skills
-* Display Members/Profiles
+* [x] Basic Development Setup/Config
+* [ ] Minimal Layouts/Templates/etc...
+    * [x] Global Layout/Partials
+    * [ ] Pages
+        * [ ] Home Page
+        * [ ] Sign Up/Sign In
+        * [ ] Edit Profile
+        * [ ] Members
+        * [ ] Member
+* [ ] 1st shot at models/relationships
+    * [ ] User
+    * [ ] UserProfile
+    * [ ] Skill
+    * [ ] Foo
+    * [ ] Bar
+* [ ] Member Sign Up and Profile Completion
+    * [ ] Name
+    * [ ] Contact
+    * [ ] Bio
+    * [ ] Skills
+
+
+#### User
+
+- first_name
+- last_name
+- email
+- password
+- Has many skills
+- Has one profile
+- Has many roles
+- Fields:
+    * Foo
+    * Bar
+
+#### UserRole
+
+- name
+- Belongs to many users
+
+#### UserProfile
+
+- bio
+- website_url
+- github_username
+- linked_in_url
+- is_for_hire
+- Belongs to user
+- Has many MiscLinks ?
+
+#### Skill
+
+- name
+- Belongs to many users
