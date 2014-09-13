@@ -7,6 +7,11 @@
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
+    "require-dev": {
+        "way/generators": "~2.0",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "doctrine/dbal": "~2.3"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -15,7 +20,10 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+        "psr-4": {
+            "TheCoalition\\": "app/TheCoalition"
+        }
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -24,6 +32,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
