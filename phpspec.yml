@@ -1,0 +1,5 @@
+suites:
+  domain_suite:
+    namespace: TheCoalition
+    src_path: app
+    spec_path: app
