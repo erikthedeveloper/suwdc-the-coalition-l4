@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('page.title', 'Default Page Title')</title>
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="http://bootswatch.com/paper/bootstrap.min.css">
 </head>
 <body>
 
