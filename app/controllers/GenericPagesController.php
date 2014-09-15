@@ -40,40 +40,8 @@ class GenericPagesController extends BaseController
      */
     public function viewMemberPage()
     {
-        $member = $this->getFakeMember();
+        $member = User::where('email', 'erikthedeveloper@gmail.com')->firstOrFail();
         $data   = compact('member');
         return View::make('pages.member', $data);
-    }
-
-    /**
-     * @return User
-     * @author Erik Aybar
-     */
-    public function getFakeMember()
-    {
-        Eloquent::unguard();
-        $member      = new User();
-        $member_attr = [
-            "first_name" => "Erik",
-            "last_name"  => "Aybar",
-            "email"      => "erikthedeveloper@gmail.com",
-            "skills"     => [
-                "MVC",
-                "PHP",
-                "Javascript",
-                "Kung Fu",
-                "Laravel",
-                "Ruby on Rails"
-            ],
-            "bio"              => "A great biography here....",
-            "website_url"      => "http://erikaybar.name",
-            "github_username"  => "erikthedeveloper",
-            "twitter_username" => "erikthedev_",
-            "city"             => "Hurricane, UT",
-            "company"          => "PracticeGenius, LLC",
-            "is_for_hire"      => false
-        ];
-        $member->fill($member_attr);
-        return $member;
     }
 }
