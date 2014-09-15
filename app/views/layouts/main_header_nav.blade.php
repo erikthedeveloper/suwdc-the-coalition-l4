@@ -17,6 +17,9 @@
                 <a href="{{route('members.index')}}">Our Members</a>
             </li>
             <li>
+                <a href="{{route('members.create')}}">Sign Up</a>
+            </li>
+            <li>
                 <a href={{route('mission')}}>Our Mission</a>
             </li>
             <li>

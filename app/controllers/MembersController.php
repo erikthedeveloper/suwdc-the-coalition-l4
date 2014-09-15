@@ -21,7 +21,10 @@ class MembersController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('members.create');
+        $data = [
+            'member' => new User
+        ];
+		return View::make('members.create', $data);
 	}
 
 	/**
@@ -58,7 +61,9 @@ class MembersController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('members.edit');
+        $member = User::where('email', 'erikthedeveloper@gmail.com')->firstOrFail();
+        $data   = compact('member');
+		return View::make('members.edit', $data);
 	}
 
 	/**

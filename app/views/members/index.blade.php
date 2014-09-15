@@ -15,7 +15,7 @@ $fake_members = [
 ];
 ?>
 @foreach($fake_members as $name => $image)
-<a href="/members/erik-aybar">
+<a href="{{route('members.show', 'erik-aybar')}}">
 <h4>{{$name}}</h4>
 </a>
 <div class="row">
