@@ -10,6 +10,21 @@
 
     @include('layouts.main_header_nav')
 
+    @if(Session::has('flash_message') || count($errors))
+    <div class="alert alert-warning" style="margin: 0;
+                                            border-radius: 0;
+                                            bottom: 50px;
+                                            position: absolute;
+                                            opacity: 0.8;">
+        <strong>{{Session::get('flash_message', 'Well, ok then!')}}</strong>
+        <ul class="list-unstyled">
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div class="container">
         @yield('content')
     </div>

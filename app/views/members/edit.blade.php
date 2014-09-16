@@ -8,7 +8,9 @@ Edit Profile
 <h1>{{$member->last_name}}, {{$member->first_name}} <small>Edit Yourself!</small></h1>
 
 {{Form::model($member, [
-    'class' => 'form'
+    'class' => 'form',
+    'route' => ['members.update', $member->makeSlug()],
+    'method' => 'PUT'
 ])}}
 <div class="row">
     <div class="col-sm-6 col-sm-push-3">

@@ -3,7 +3,7 @@
 <?php
 $fake_attributes = [
     "bio"              => "A great biography here....",
-    "profile_image" => "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10404876_10202532753824731_540350757285231520_n.jpg?oh=657d56d0a1b89976181b7c308b308896&oe=54A01A20&__gda__=1418912281_cf95bc040e313abce4663d0d1510e604",
+    "profile_image"    => "http://lorempixel.com/400/400/business/" . mt_rand(1,9),
     "website_url"      => "http://erikaybar.name",
     "github_username"  => "erikthedeveloper",
     "twitter_username" => "erikthedev_",
