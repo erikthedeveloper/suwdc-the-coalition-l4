@@ -17,10 +17,10 @@
                 <a href="{{route('members.index')}}">Our Members</a>
             </li>
             <li>
-                <a href="{{route('members.create')}}">Sign Up</a>
+                <a href={{route('mission')}}>Our Mission</a>
             </li>
             <li>
-                <a href={{route('mission')}}>Our Mission</a>
+                <a href="#">Schedule/News</a>
             </li>
             <li>
                 <a href="#">Discuss</a>
@@ -30,7 +30,12 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Log In</a></li>
+            <li>
+                <a href="{{route('members.create')}}">Sign Up</a>
+            </li>
+            <li>
+                <a href={{route('login')}}>Log In</a>
+            </li>
         </ul>
     </div>
 </nav>

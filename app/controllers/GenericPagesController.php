@@ -44,4 +44,13 @@ class GenericPagesController extends BaseController
         $data   = compact('member');
         return View::make('pages.member', $data);
     }
+
+    /**
+     * @return \Illuminate\View\View
+     * @author Erik Aybar
+     */
+    public function loginPage()
+    {
+        return View::make('pages.login');
+    }
 }

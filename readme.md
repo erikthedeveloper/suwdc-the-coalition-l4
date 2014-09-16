@@ -35,19 +35,17 @@ SUWDC Group Social Network
 * [ ] Minimal Layouts/Templates/etc...
     * [x] Global Layout/Partials
     * [ ] Pages
-        * [ ] Home Page
-        * [ ] Sign Up/Sign In
-        * [ ] Edit Profile
-        * [ ] Members
-        * [ ] Member
-* [ ] 1st shot at models/relationships
-    * [ ] User
+        * [x] Home Page
+        * [x] Sign Up/Log In
+        * [x] Edit Profile
+        * [x] Members
+        * [x] Member
+* [x] 1st shot at models/relationships
+    * [x] User
     * [ ] UserProfile
-    * [ ] Skill
-    * [ ] Foo
-    * [ ] Bar
+    * [x] Skill
 * [ ] Member Sign Up and Profile Completion
-    * [ ] Name
+    * [x] Name
     * [ ] Contact
     * [ ] Bio
     * [ ] Skills
