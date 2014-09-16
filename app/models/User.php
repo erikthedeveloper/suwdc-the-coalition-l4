@@ -30,11 +30,24 @@ class User extends BaseModel implements UserInterface, RemindableInterface
 
     protected $table = 'users';
     protected $hidden = ['password', 'remember_token'];
-    protected $fillable = ['first_name', 'last_name', 'email'];
+    protected $fillable = ['first_name', 'last_name', 'email', 'password'];
 
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @author Erik Aybar
+     */
     public function skills()
     {
         return $this->belongsToMany('Skill');
+    }
+
+    /**
+     * @return string
+     * @author Erik Aybar
+     */
+    public function makeSlug()
+    {
+        return strtolower($this->first_name . '-' . $this->last_name);
     }
 }
